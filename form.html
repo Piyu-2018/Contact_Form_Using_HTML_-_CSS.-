@@ -1,0 +1,175 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta 
+       name="viewport"
+       content="width=device-width , initial-scale=1, maximum-scale=5"/>
+       <style>
+
+:root{
+    --text-color:#828282;
+    --border-color:#e0e0e0;
+    --primary-color:#2f80ed;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Lata", sans-serif;
+    color: #222;
+
+    height: 100vh;
+
+    background-image: url("NCt0Pv.jpg");
+    background-size: cover;
+}
+
+.heading{
+    font-size:24px;
+    margin:0;
+    align-items: center;
+
+}
+
+.panel{
+    background-color: rgb(233, 236, 240);
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow:0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+input[type=text],[type=date] ,select, textarea{
+  background-color: rgb(248, 244, 240);
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgb(7, 1, 1);
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  
+  
+}
+
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+
+
+input[type=submit] {
+  background-image:url("NCt0Pv.jpg");
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  width: 10em;  height: 3em;
+  border-radius: 6px;
+  cursor: pointer;
+  float: right;
+}
+
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+
+  height: 100%;
+  padding: 20px;
+  align-items: center;
+}
+
+/
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 600px) {
+  .panel{
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+       </style>
+   
+  </head>
+<body>
+<div class="container">
+  <div class="panel">
+    <h1 class="heding">Say Hello!</h1> </br>
+    <form  action="action_page.php", onsubmit="alert('Success')" >
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">First Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="firstname" required id="firstname" placeholder="Your name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Last Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="lastname" required id="lastname" placeholder="Your last name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="birthday">Birthday:</label>
+        </div>
+        <div class="col-75">
+          <input type="date" id="birthday" required id="birthday" name="birthday">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="country" >Country</label>
+        </div>
+        <div class="col-75">
+          <select id="country" name="country" >
+            <option value="none">None</option>
+            <option value="india">India</option>
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+            <option value="srilanka">Sri Lanka</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="subject">Subject</label>
+        </div>
+        <div class="col-75">
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:75px"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+
+  </div>
+  
+</div>
+
+</body>
+</html>
